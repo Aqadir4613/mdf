@@ -1,0 +1,19 @@
+name: Print Current Branch
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+
+jobs:
+  print-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Print Current Branch
+        run: |
+          echo "Current Branch: ${{ github.ref }}"
