@@ -16,4 +16,4 @@ jobs:
 
       - name: Print Current Branch
         run: |
-          echo "Current Branch: ${{ github.ref }}"
+          echo "Current Branch: $CL_COMMIT_BRANCH"
